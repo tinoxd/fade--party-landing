@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fade Party — Владикавказ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial Black', sans-serif;
+      background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 30px;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #ff9900;
+      text-shadow: 0 0 15px #ff9900;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { text-shadow: 0 0 10px #ff9900; }
+      50% { text-shadow: 0 0 25px #ffcc00; }
+    }
+
+    .info {
+      font-size: 20px;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .lineup {
+      margin-top: 40px;
+    }
+
+    .lineup h2 {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    .lineup span {
+      display: block;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .btn {
+      margin-top: 40px;
+      background: #25D366;
+      color: white;
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #25D366;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #25D366;
+    }
+
+    .footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .info, .lineup span {
+        font-size: 18px;
+      }
+
+      .btn {
+        font-size: 18px;
+        padding: 12px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fade Party</h1>
+    <div class="info">
+      📅 20 Июля, 19:00<br/>
+      📍 Ресторан "Торне", Владикавказ<br/>
+      🎧 All Star Moscow DJ's
+    </div>
+
+    <div class="lineup">
+      <h2>Line-up:</h2>
+      <span>D.A.L.I.</span>
+      <span>MEG</span>
+      <span>NERAK</span>
+      <small>Support: KHURY</small>
+    </div>
+
+    <a class="btn" href="https://wa.me/79268219999" target="_blank">
+      🎟 Купить билет через WhatsApp
+    </a>
+
+    <div class="footer">
+      21+ | Поддержка: resident.yaa<br/>
+      Организатор: mescal group
+    </div>
+  </div>
+</body>
+</html>

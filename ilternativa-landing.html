@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILTERNATIVA - Настоящий девичник для девочек 7+</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, #ff6ec7 0%, #c77dff 50%, #7209b7 100%);
+            min-height: 100vh;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 110, 199, 0.1) 20%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hero-title {
+            font-size: 32px;
+            font-weight: 900;
+            color: #e01e5a;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-text {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff006e, #c77dff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Event Info */
+        .event-info {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .date-time {
+            font-size: 24px;
+            font-weight: 700;
+            color: #e01e5a;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .age-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6ec7, #c77dff);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(255, 110, 199, 0.4);
+        }
+
+        /* Attractions */
+        .attractions {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .attractions-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #e01e5a;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .attractions-list {
+            list-style: none;
+        }
+
+        .attractions-list li {
+            font-size: 20px;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #ffeef8 0%, #f3e7ff 100%);
+            border-radius: 15px;
+            position: relative;
+            padding-left: 50px;
+            font-weight: 500;
+            color: #5a0c91;
+            transition: transform 0.3s ease;
+        }
+
+        .attractions-list li:hover {
+            transform: translateX(5px);
+        }
+
+        .attractions-list li::before {
+            content: '✨';
+            position: absolute;
+            left: 15px;
+            font-size: 24px;
+        }
+
+        /* Dolphin Image */
+        .dolphin-section {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .dolphin-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .sparkles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .sparkle {
+            position: absolute;
+            font-size: 20px;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-button {
+            display: block;
+            background: #25D366;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            margin: 30px auto;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-button::before {
+            content: '📱';
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Decorative Elements */
+        .decoration {
+            position: fixed;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .heart {
+            color: #ff6ec7;
+            font-size: 30px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .star {
+            color: #ffd700;
+            font-size: 25px;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 26px;
+            }
+            
+            .logo-text {
+                font-size: 36px;
+            }
+            
+            .attractions-list li {
+                font-size: 18px;
+                padding-left: 40px;
+            }
+            
+            .whatsapp-button {
+                font-size: 18px;
+                padding: 18px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative Elements -->
+    <div class="decoration heart" style="top: 10%; left: 5%;">💕</div>
+    <div class="decoration star" style="top: 20%; right: 10%;">⭐</div>
+    <div class="decoration heart" style="bottom: 30%; left: 8%;">💖</div>
+    <div class="decoration star" style="bottom: 20%; right: 5%;">✨</div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1 class="hero-title">НАСТОЯЩИЙ ДЕВИЧНИК 🎀</h1>
+            <div class="logo-text">ILTERNATIVA</div>
+            <div class="age-badge">Возраст 7+</div>
+        </div>
+
+        <!-- Event Info -->
+        <div class="event-info">
+            <div class="date-time">
+                📅 20 июля<br>
+                ⏰ 8:00 утра
+            </div>
+        </div>
+
+        <!-- Attractions -->
+        <div class="attractions">
+            <h2 class="attractions-title">Что вас ждёт:</h2>
+            <ul class="attractions-list">
+                <li>Грозный</li>
+                <li>Дельфинарий</li>
+                <li>Аквапарк</li>
+                <li>Английский замок</li>
+                <li>И многое другое</li>
+            </ul>
+        </div>
+
+        <!-- Dolphin Image Section -->
+        <div class="dolphin-section">
+            <div class="sparkles">
+                <span class="sparkle" style="top: 10%; left: 20%; animation-delay: 0s;">✨</span>
+                <span class="sparkle" style="top: 30%; right: 15%; animation-delay: 1s;">✨</span>
+                <span class="sparkle" style="bottom: 20%; left: 25%; animation-delay: 2s;">✨</span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=600&h=400&fit=crop" 
+                 alt="Дельфины" 
+                 class="dolphin-img">
+        </div>
+
+        <!-- WhatsApp CTA -->
+        <a href="https://wa.me/79888766777?text=Здравствуйте!%20Хочу%20записать%20ребёнка%20на%20мероприятие%20ILTERNATIVA." 
+           class="whatsapp-button"
+           target="_blank">
+            Записаться в WhatsApp
+        </a>
+    </div>
+
+    <script>
+        // Add some interactive sparkles on click
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('whatsapp-button')) return;
+            
+            const sparkle = document.createElement('div');
+            sparkle.innerHTML = '✨';
+            sparkle.style.position = 'fixed';
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            sparkle.style.fontSize = '20px';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.animation = 'sparkle 1s ease-out forwards';
+            sparkle.style.zIndex = '9999';
+            
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 1000);
+        });
+    </script>
+</body>
+</html>
